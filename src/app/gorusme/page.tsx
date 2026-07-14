@@ -15,7 +15,7 @@ export default function MeetingPage() {
         <div className="meetingNavLinks">
           <Link href="/#vizeler">Vizeler</Link>
           <Link href="/#danismanlik">Danışmanlık</Link>
-          <Link href="/#hikayeler">İçgörüler</Link>
+          <Link href="/#basla">Ana Sayfa</Link>
         </div>
         <Link className="meetingBack" href="/">← Ana sayfa</Link>
       </nav>

@@ -1,14 +1,6 @@
 import Image from "next/image";
 import ConsultingSteps from "./consulting-steps";
 
-const stories = [
-  { tone: "peach", kicker: "Yeni", title: "Sana uygun pasif gelir planı" },
-  { tone: "sunset", kicker: "Rehber", title: "Dijital varlıklarını büyüt" },
-  { tone: "forest", kicker: "İlham", title: "Gelirini doğaya bırak" },
-];
-
-const paths = ["Dijital ürünler", "İçerik & topluluk", "Akıllı yatırımlar"];
-
 const visas = [
   { country: "İspanya", title: "İspanya Pasif Gelir Vizesi", tone: "spain", duration: "2 Ay" },
   { country: "Portekiz", title: "Portekiz D7 Vizesi", tone: "portugal", duration: "6 Ay" },
@@ -25,7 +17,7 @@ export default function Home() {
         <nav className="nav shell" aria-label="Ana menü">
           <a className="brand brandImageLink brandOnDark" href="#basla"><Image src="/images/logo-web.png" alt="Pasif Gelir" width={160} height={52} className="brandLogo" priority /></a>
           <div className="navLinks">
-            <a href="#yollar">Yollar</a><a href="#nasil">Nasıl çalışır?</a><a href="#hikayeler">İçgörüler</a>
+            <a href="#vizeler">Vizeler</a><a href="#danismanlik">Danışmanlık</a><a href="/gorusme">Görüşme</a>
           </div>
           <a className="navCta" href="/gorusme">Ücretsiz Ön Değerlendirme <span>↗</span></a>
         </nav>
@@ -42,47 +34,6 @@ export default function Home() {
           <small>Kredi kartı gerekmez · 2 dakikada kişisel yol haritan</small>
         </div>
         <div className="heroFoot shell"><span>↓ Keşfetmek için kaydır</span><span>Bağımsızlık, küçük adımlarla başlar.</span></div>
-      </section>
-
-      <section className="stories shell section" id="hikayeler">
-        <div className="sectionHead">
-          <div><span className="sectionKicker">GÜNCEL İÇGÖRÜLER</span><h2>Yeni bir gelir biçimiyle tanış.</h2></div>
-          <p>Başlamak için ihtiyacın olan fikirler, araçlar ve sade yol haritaları.</p>
-        </div>
-        <div className="storyGrid">
-          {stories.map((story, i) => (
-            <article key={story.title} className="storyCard">
-              <div className={`storyVisual ${story.tone}`}>
-                <span>{story.kicker}</span><strong>{story.title}</strong><i>{String(i + 1).padStart(2, "0")}</i>
-              </div>
-              <h3>{story.title}</h3>
-              <div className="meta"><span>Başlangıç</span><span>6 dk okuma</span><b>↗</b></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="paths shell section" id="yollar">
-        <div className="pathPanel" id="nasil">
-          <div className="pathTabs">
-            <span className="selected"><i className="dot warm" /> Dijital Ürünler</span>
-            <span><i className="dot blue" /> İçerik & Topluluk</span>
-            <span><i className="dot green" /> Akıllı Yatırımlar</span>
-          </div>
-          <div className="pathShowcase">
-            <i className="showOrb faded left" aria-hidden="true" />
-            <div className="pathItem side"><i className="showOrb purple" /><h3>İçerik</h3><p>Bilgini faydalı içeriklere<br/>ve sadık bir kitleye dönüştür.</p></div>
-            <button className="pathArrow" aria-label="Önceki">‹</button>
-            <div className="pathItem main"><i className="showOrb coral"><span>▶</span></i><h3>Dijital ürünler <b>↗</b></h3><p>Bir kez üret, tekrar tekrar sat.<br/>Bilgini çalışan bir varlığa dönüştür.</p></div>
-            <button className="pathArrow" aria-label="Sonraki">›</button>
-            <div className="pathItem side"><i className="showOrb moss" /><h3>Topluluk</h3><p>Ortak bir ilgi etrafında<br/>sürdürülebilir değer oluştur.</p></div>
-            <i className="showOrb faded right" aria-hidden="true" />
-          </div>
-          <div className="pathBottom">
-            {paths.map((path, i) => <span key={path} className={i === 0 ? "active" : ""}>{path}</span>)}
-            <b>Planını oluştur</b>
-          </div>
-        </div>
       </section>
 
       <section className="visaSection section" id="vizeler">
